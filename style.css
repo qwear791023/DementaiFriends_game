@@ -1,0 +1,1263 @@
+@-webkit-keyframes slide-out {
+  from {
+    right: 0;
+  }
+  to {
+    right: 100%;
+  }
+}
+@keyframes slide-out {
+  from {
+    right: 0;
+  }
+  to {
+    right: 100%;
+  }
+}
+@-webkit-keyframes slide-in {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}
+@keyframes slide-in {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: min(24px, 2.4vw);
+}
+
+body {
+  background: url(img/BG.jpg) repeat;
+  border-top: #8ebc39 10px solid;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 0.3rem;
+}
+
+.overflow-y-auto::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+}
+
+ul, ol, li {
+  list-style-type: none;
+}
+
+input, button, label, a {
+  cursor: pointer;
+}
+
+button {
+  background: transparent;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.all-w img {
+  width: 100%;
+}
+
+.hover .b {
+  display: none;
+}
+
+a.btn_top {
+  position: fixed;
+  left: 50%;
+  bottom: min(232px, 31vw);
+  transform: translateX(211%);
+  display: none;
+}
+a.btn_top img {
+  width: min(103px, 13.7vw);
+}
+
+.nav {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(246, 240, 219, 0.7803921569);
+}
+.nav.open {
+  visibility: visible;
+}
+.nav .menu-nav__item:not(:first-child) {
+  margin-top: 25px;
+}
+.nav .menu-nav__link > img {
+  width: 270px;
+}
+
+.article {
+  width: 100%;
+  max-width: 750px;
+  min-height: calc(100vh - 250px);
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+.article .btn_menu {
+  position: fixed;
+  width: 90px;
+  top: 0;
+  left: 66.5%;
+  transform: translateX(0);
+  z-index: 3;
+}
+.article .title {
+  width: 460px;
+}
+
+.index {
+  padding-top: min(50px, 6.6vw);
+  position: relative;
+}
+.index .pic {
+  width: min(390px, 76vw);
+}
+.index .head {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-40%);
+  top: min(170px, 33.13vw);
+  width: min(245px, 32.6vw);
+}
+.index .title {
+  display: block;
+  width: min(460px, 87.7vw);
+  margin: 0 auto;
+  padding: min(10px, 1.33vw);
+}
+.index .btn_go, .index a.link {
+  width: min(236px, 45vw);
+  display: inline-block;
+}
+.index .take2 {
+  display: none;
+}
+.index .text {
+  width: min(245px, 32.6vw);
+}
+.index .date {
+  width: min(336px, 44.8vw);
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: min(30px, 4vw);
+  margin-bottom: min(15px, 2vw);
+}
+.index .mb {
+  margin-bottom: min(12px, 1.6vw);
+}
+
+.caption .title {
+  margin-top: min(6.66vw, 50px);
+}
+.caption .title-sub {
+  width: 265px;
+  margin: min(54px, 7.2vw);
+}
+.caption .text {
+  width: 461px;
+}
+.caption a > img {
+  width: 235px;
+  margin: min(55px, 7.3vw);
+}
+
+.method .title {
+  margin-top: min(50px, 6.66vw);
+}
+.method .text {
+  margin-top: min(48px, 6.4vw);
+  margin-bottom: min(205px, 27.3vw);
+  width: 474px;
+}
+
+.gift {
+  position: relative;
+}
+.gift .title {
+  margin-top: min(50px, 6.7vw);
+}
+.gift .title-sub {
+  width: 430.3px;
+  margin-top: min(50px, 6.7vw);
+}
+.gift .gift_item {
+  display: block;
+  width: 344.2px;
+  margin: 0 auto;
+  margin-top: min(40px, 5.3vw);
+}
+.gift .text {
+  width: 468.5px;
+  margin: 108px auto;
+}
+.gift .mail_link {
+  position: absolute;
+  width: 57%;
+  height: 0.675%;
+  left: 23%;
+  bottom: 2.5%;
+}
+
+.heed .title {
+  margin-top: min(136px, 18vw);
+}
+.heed .text {
+  width: 468.5px;
+  margin-top: min(45px, 6vw);
+  margin-bottom: min(150px, 20vw);
+}
+
+.winner .title {
+  margin-top: min(50px, 9vw);
+}
+.winner .title-sub {
+  width: 263px;
+  margin-top: min(60px, 8vw);
+  margin-bottom: min(30px, 4vw);
+}
+.winner .winner_item {
+  width: min(600px, 85vw);
+}
+
+.form .title {
+  margin-top: min(95px, 12.7vw);
+}
+.form .text {
+  width: 356px;
+  margin-top: min(30px, 5.3vw);
+  margin-bottom: min(46.5px, 8.3vw);
+}
+.form .form-group {
+  width: 402px;
+  margin: 0 auto;
+}
+.form .form-group .form-label {
+  display: block;
+  text-align: left;
+  margin-top: min(36px, 4.8vw);
+}
+.form .form-group .form-label img {
+  height: 27.75px;
+}
+.form .form-group input.form-control {
+  display: block;
+  font-size: 22.5px;
+  width: 100%;
+  padding: min(23px, 3.06vw);
+  border: #9a8265 2px solid;
+  border-radius: 15px;
+}
+.form .form-group input.form-control:focus {
+  outline: none;
+}
+.form .form-group .form-check {
+  margin-top: min(36px, 4.8vw);
+}
+.form .form-group input.form-check-input {
+  display: none;
+}
+.form .form-group label.form-check-label {
+  display: block;
+  padding-left: min(40.5px, 7.2vw);
+  background-image: url(img/07/btn_checkA.gif);
+  background-size: min(30px, 5.3vw);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+.form .form-group label.form-check-label img {
+  width: 369px;
+}
+.form .form-group .form-check-input:checked + .form-check-label {
+  background-image: url(img/07/btn_checkB.gif);
+}
+.form .form-group .form-select {
+  width: 95%;
+  font-size: 22.5px;
+  padding: min(17px, 3.06vw);
+  padding-right: min(34.5px, 6.13vw);
+  font-weight: 600;
+  line-height: 1.5;
+  background-image: url(img/07/selectorBar.gif);
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 11.7%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: #9a8265 2px solid;
+  border-radius: 15px;
+}
+.form .form-group .form-select:focus {
+  outline: none;
+}
+.form .form-group select[name=county] {
+  margin-right: 2.5%;
+}
+.form .form-group select[name=district] {
+  margin-left: 2.5%;
+}
+.form .form-group .select-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: min(18px, 2.4vw);
+}
+.form .form-group .select-group > div {
+  width: 260px;
+}
+.form a.hover img {
+  width: 235px;
+  margin-top: min(60px, 8vw);
+  margin-bottom: min(90px, 12vw);
+}
+
+.game .title {
+  margin-top: min(60px, 8vw);
+}
+.game .board {
+  width: min(531px, 94.4vw);
+  padding-top: min(26px, 3.5vw);
+}
+.game .btn_next > img, .game .btn_fin > img {
+  width: min(235px, 45vw);
+}
+.game .q1 .poker_items {
+  width: min(467.4px, 83.1vw);
+  margin: 0 auto;
+  margin-top: max(-450px, -75vw);
+  margin-bottom: min(105px, 14vw);
+}
+.game .q1 .poker_items input[name=poker] {
+  display: none;
+}
+.game .q1 .poker_items label > img {
+  width: 17%;
+  margin: min(3px, 0.4vw);
+  transition: all 0.5s ease-in-out;
+}
+.game .q1 .poker_items label > img:hover {
+  filter: contrast(300%);
+}
+.game .q1 .poker_items input[name=poker]:checked + label > img {
+  filter: contrast(300%);
+}
+.game .q1 .text {
+  width: min(268px, 51vw);
+  margin-bottom: min(27px, 4.8vw);
+}
+.game .q1 .btn_next {
+  margin-bottom: min(25px, 4.5vw);
+}
+.game .q2 {
+  display: none;
+}
+.game .q2 .pic {
+  width: min(436.5px, 77.6vw);
+  display: block;
+  margin: 0 auto;
+  margin-top: max(-446.25px, -79.3vw);
+  margin-bottom: min(63px, 11.2vw);
+}
+.game .q2 .text {
+  width: min(240.75px, 42.8vw);
+}
+.game .q2 .btn-group {
+  width: 75.5%;
+  margin: 0 auto;
+  margin-top: min(22.5px, 4vw);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.game .q2 .btn-group input.form-check-input {
+  display: none;
+}
+.game .q2 .btn-group .form-check-label {
+  display: block;
+  width: min(90px, 24vw);
+  height: min(30px, 8vw);
+  text-align: left;
+  margin-bottom: min(10px, 1.33vw);
+  padding-left: min(40px, 10.6vw);
+  background-image: url(img/04/btn_checkA.gif);
+  background-size: min(30px, 8vw);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+.game .q2 .btn-group .form-check-label img {
+  height: 100%;
+}
+.game .q2 .btn-group .form-check-label[for=giraffe] {
+  width: min(150px, 40vw);
+}
+.game .q2 .btn-group .form-check-label[for=lion] {
+  width: min(135px, 36vw);
+}
+.game .q2 .btn-group .form-check-input:checked + .form-check-label {
+  background-image: url(img/04/btn_checkB.gif);
+}
+.game .q2 .btn_next > img {
+  margin: min(49px, 6.5vw);
+}
+.game .q3 {
+  display: none;
+  position: relative;
+}
+.game .q3 .year, .game .q3 .month, .game .q3 .day {
+  display: block;
+  margin: 0 auto;
+}
+.game .q3 .text {
+  margin-top: min(49px, 6.5vw);
+  width: min(189.5px, 33.7vw);
+}
+.game .q3 .year {
+  width: min(34.3vw, 193px);
+  margin-top: max(-478px, -85vw);
+}
+.game .q3 .form-select {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  border: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: min(391px, 69.5vw);
+  height: min(71.25px, 12.7vw);
+  padding-left: min(137px, 24.4vw);
+  font-size: min(26px, 4.6vw);
+  color: #eda033;
+  font-weight: bold;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.game .q3 .form-select.month {
+  background-image: url(img/04/q3/month.gif);
+  top: min(423px, 75.26vw);
+}
+.game .q3 .form-select.day {
+  background-image: url(img/04/q3/day.gif);
+  top: min(513.75px, 91.33vw);
+}
+.game .q3 .form-select:focus {
+  outline: none;
+}
+.game .q3 .btn_next {
+  margin-top: min(280px, 50vw);
+  margin-bottom: min(35px, 4.7vw);
+}
+.game .q4 {
+  display: none;
+  position: relative;
+}
+.game .q4 .text {
+  margin-top: min(46px, 6vw);
+  width: 52%;
+}
+.game .q4 .pic {
+  position: absolute;
+  width: min(413.4px, 73.5vw);
+  top: min(200px, 26.7vw);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.game .q4 .btn-group {
+  margin: 30px auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.game .q4 .btn-group input.form-check-input {
+  display: none;
+}
+.game .q4 .btn-group .form-check-label {
+  display: block;
+  width: min(150px, 40vw);
+  height: min(32px, 8.6vw);
+  margin-top: min(20px, 2.66vw);
+  text-align: left;
+  padding-left: min(56px, 11.25vw);
+  background-image: url(img/04/btn_checkA.gif);
+  background-size: min(32px, 8.6vw);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+.game .q4 .btn-group .form-check-label img {
+  height: 100%;
+}
+.game .q4 .btn-group .form-check-input:checked + .form-check-label {
+  background-image: url(img/04/btn_checkB.gif);
+}
+.game .q4 .btn_next {
+  margin-bottom: min(108px, 14.4vw);
+}
+.game .q5 {
+  display: none;
+  position: relative;
+}
+.game .q5 .text {
+  margin-top: min(50px, 6.8vw);
+  width: 49%;
+}
+.game .q5 .pic {
+  width: min(233.4px, 41.5vw);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: min(250px, 40vw);
+}
+.game .q5 .input-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: min(46px, 6vw);
+  width: 93%;
+}
+.game .q5 .input-group input[name=poker2] {
+  display: none;
+}
+.game .q5 .input-group .form-check-label {
+  display: block;
+  width: min(100px, 13.33vw);
+  min-width: 84px;
+  height: min(30px, 8.4vw);
+  margin-bottom: min(10px, 2vw);
+  text-align: left;
+  padding-left: min(40px, 5.33vw);
+  background-image: url(img/04/btn_checkA.gif);
+  background-size: min(30px, 4vw);
+  background-position: 0 center;
+  background-repeat: no-repeat;
+}
+.game .q5 .input-group .form-check-label img {
+  height: 100%;
+}
+.game .q5 .input-group input[name=poker2]:checked + .form-check-label {
+  background-image: url(img/04/btn_checkB.gif);
+}
+.game .q5 .btn_fin {
+  margin-top: min(60px, 8vw);
+  margin-bottom: min(76px, 10vw);
+}
+.game .score {
+  display: none;
+}
+.game .score .pic {
+  width: min(527px, 93.3vw);
+  margin-top: min(57px, 7.6vw);
+}
+.game .score .pic-sex, .game .score .pic-age {
+  width: min(139px, 24.7vw);
+  margin-top: min(75px, 10vw);
+}
+.game .score .input-group {
+  margin: 0 auto;
+  margin-top: min(45px, 6vw);
+}
+.game .score .input-group.sex {
+  width: 21%;
+}
+.game .score .input-group.age {
+  width: 27%;
+}
+.game .score .input-group input[type=radio] {
+  display: none;
+}
+.game .score .input-group .form-check-label {
+  display: block;
+  height: min(30px, 5.33vw);
+  text-align: left;
+  margin-top: min(22px, 4vw);
+  padding-left: min(52px, 9.2vw);
+  background-image: url(img/05/btn_checkA.gif);
+  background-size: min(30px, 5.3vw);
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+.game .score .input-group .form-check-label img {
+  height: 100%;
+}
+.game .score .input-group .form-check-label[for=age7] {
+  height: min(35px, 6.22vw);
+}
+.game .score .input-group input[type=radio]:checked + .form-check-label {
+  background-image: url(img/05/btn_checkB.gif);
+}
+.game .score .btn_next {
+  display: block;
+  width: 45%;
+  margin: 0 auto;
+  margin-top: min(75px, 10vw);
+  margin-bottom: min(102px, 13.6vw);
+}
+
+.health {
+  overflow: hidden;
+}
+.health .title {
+  margin-top: 45px;
+}
+.health .animate_slide-in {
+  -webkit-animation: slide-in 0.5s ease-in-out 0.5s forwards;
+          animation: slide-in 0.5s ease-in-out 0.5s forwards;
+}
+.health .animate_slide-out {
+  -webkit-animation: slide-out 0.5s ease-in-out forwards;
+          animation: slide-out 0.5s ease-in-out forwards;
+}
+.health .step0 {
+  position: relative;
+}
+.health .step0 .pic {
+  width: 275px;
+  margin-top: 43px;
+}
+.health .step0 .text {
+  width: 277px;
+  margin-top: 65px;
+}
+.health .step0 .btn_go {
+  width: 270px;
+}
+.health .step-bar {
+  width: 400px;
+  margin: 30px auto;
+}
+.health .step-text {
+  margin: 75px auto;
+}
+.health .btn_next, .health .btn_more > img, .health .btn_back > img {
+  width: 235px;
+}
+.health .btn_next, .health .btn_back > img {
+  margin-bottom: 65px;
+}
+.health .btn_more > img {
+  margin-bottom: 32px;
+}
+.health .step1 {
+  position: relative;
+  right: -100%;
+  display: none;
+}
+.health .step1 .step-title {
+  width: 410px;
+}
+.health .step1 .step-text {
+  width: 400px;
+}
+.health .step2 {
+  position: relative;
+  right: -100%;
+  display: none;
+}
+.health .step2 .step-title {
+  width: 255px;
+}
+.health .step2 .step-text {
+  width: 360px;
+}
+.health .step3 {
+  position: relative;
+  right: -100%;
+  display: none;
+}
+.health .step3 .step-title {
+  width: 370px;
+}
+.health .step3 .step-text {
+  width: 355px;
+}
+.health .step4 {
+  position: relative;
+  right: -100%;
+  display: none;
+}
+.health .step4 .step-title {
+  width: 305px;
+}
+.health .step4 .step-text {
+  width: 370px;
+}
+.health .step5 {
+  position: relative;
+  right: -100%;
+  display: none;
+}
+.health .step5 .step-title {
+  width: 160px;
+}
+.health .step5 .step-text {
+  width: 375px;
+}
+
+.question {
+  position: relative;
+}
+.question .title {
+  margin-top: 85px;
+}
+.question .text {
+  margin-top: 22.5px;
+}
+.question .check {
+  padding-left: 35px;
+  box-sizing: content-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.question .btn_next, .question .btn_fin > img {
+  width: 235px;
+  margin-bottom: 51px;
+}
+.question .btn-group {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.question .btn-group input.form-check-input {
+  display: none;
+}
+.question .btn-group .form-check-label {
+  display: block;
+  width: 100%;
+  background-image: url(img/06/btn_checkA.gif);
+  background-size: 30px;
+  background-repeat: no-repeat;
+}
+.question .btn-group .form-check-input:checked + .form-check-label {
+  background-image: url(img/06/btn_checkB.gif);
+}
+.question .q1 .text {
+  width: 386px;
+}
+.question .q1 .check {
+  width: 344px;
+}
+.question .q1 .btn-group {
+  width: 400px;
+  top: 525px;
+  margin-left: 10px;
+}
+.question .q1 .btn-group .form-check-label {
+  background-position-y: 2px;
+}
+.question .q1 .btn-group .form-check-label[for=check1] {
+  height: 33px;
+  margin-bottom: 30px;
+}
+.question .q1 .btn-group .form-check-label[for=check2] {
+  height: 33px;
+  margin-bottom: 32px;
+}
+.question .q1 .btn-group .form-check-label[for=check3] {
+  height: 63px;
+  margin-bottom: 32px;
+}
+.question .q1 .btn-group .form-check-label[for=check4] {
+  height: 61px;
+}
+.question .q1 .btn_next {
+  margin-top: 350px;
+}
+.question .q2 {
+  display: none;
+}
+.question .q2 .text {
+  width: 415px;
+}
+.question .q2 .check {
+  width: 285px;
+}
+.question .q2 .btn-group {
+  width: 325px;
+  top: 660px;
+}
+.question .q2 .btn-group .form-check-label[for=check5] {
+  height: 30px;
+  margin-bottom: 33px;
+}
+.question .q2 .btn-group .form-check-label[for=check6] {
+  height: 30px;
+  margin-bottom: 33px;
+}
+.question .q2 .btn-group .form-check-label[for=check7] {
+  height: 30px;
+  margin-bottom: 33px;
+}
+.question .q2 .btn-group .form-check-label[for=check8] {
+  height: 30px;
+}
+.question .q2 .btn_next {
+  margin-top: 300px;
+}
+.question .q3 {
+  display: none;
+}
+.question .q3 .text {
+  width: 413px;
+}
+.question .q3 .check {
+  width: 50px;
+}
+.question .q3 .btn-group {
+  width: 100px;
+  top: 580px;
+}
+.question .q3 .btn-group .form-check-label[for=check9] {
+  height: 35px;
+  margin-bottom: 25px;
+}
+.question .q3 .btn-group .form-check-label[for=check10] {
+  height: 35px;
+}
+.question .q3 .btn_next {
+  margin-top: 150px;
+}
+.question .q4 {
+  display: none;
+}
+.question .q4 .text {
+  width: 395px;
+}
+.question .q4 .check {
+  width: 315px;
+}
+.question .q4 .btn-group {
+  width: 350px;
+  top: 485px;
+}
+.question .q4 .btn-group .form-check-label[for=check11] {
+  height: 52px;
+  margin-bottom: 32px;
+}
+.question .q4 .btn-group .form-check-label[for=check12] {
+  height: 52px;
+  margin-bottom: 32px;
+}
+.question .q4 .btn-group .form-check-label[for=check13] {
+  height: 30px;
+  margin-bottom: 23px;
+}
+.question .q4 .btn-group .form-check-label[for=check14] {
+  height: 30px;
+}
+.question .q4 .btn_next {
+  margin-top: 350px;
+}
+.question .q5 {
+  display: none;
+}
+.question .q5 .text {
+  width: 280px;
+}
+.question .q5 .check {
+  width: 345px;
+}
+.question .q5 .btn-group {
+  width: 385px;
+  top: 500px;
+}
+.question .q5 .btn-group .form-check-label {
+  background-position-y: 2px;
+}
+.question .q5 .btn-group .form-check-label[for=check15] {
+  height: 65px;
+  margin-bottom: 30px;
+}
+.question .q5 .btn-group .form-check-label[for=check16] {
+  height: 33px;
+  margin-bottom: 30px;
+}
+.question .q5 .btn-group .form-check-label[for=check17] {
+  height: 33px;
+  margin-bottom: 30px;
+}
+.question .q5 .btn-group .form-check-label[for=check18] {
+  height: 33px;
+}
+.question .q5 .btn_fin > img {
+  margin-top: 300px;
+}
+
+.right, .wrong {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(242, 235, 210, 0.8156862745);
+  top: 0;
+  left: 0;
+}
+.right img, .wrong img {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(446px, 60vw);
+}
+
+.footer {
+  height: min(240px, 32vw);
+  background: url(img/footer-bg.gif);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer .logo {
+  width: min(197px, 26.2vw);
+}
+.footer p {
+  color: #fff;
+  margin-top: min(20px, 2.6vw);
+}
+
+@media (max-width: 750px) {
+  body {
+    border-top: #8ebc39 1.3vw solid;
+  }
+  .article {
+    min-height: calc(100vh - 32vw);
+  }
+  .index {
+    padding: 20vw 0;
+  }
+  .article > .btn_menu {
+    width: 17.6vw;
+    left: 50%;
+    transform: translateX(151.5%);
+  }
+  .nav .menu-nav__item:not(:first-child) {
+    margin-top: 4vw;
+  }
+  .nav .menu-nav__link > img {
+    width: 48vw;
+  }
+  .article > .title {
+    width: 87vw;
+  }
+  .caption .title-sub {
+    width: 47.2%;
+  }
+  .caption .text {
+    width: 82%;
+  }
+  .caption a > img {
+    width: 45.1%;
+  }
+  .method .text {
+    width: 84.3%;
+  }
+  .gift .title-sub {
+    width: 76.5%;
+  }
+  .gift .gift_item {
+    width: 61.2%;
+    margin-top: min(40px, 5.3vw);
+  }
+  .gift .text {
+    width: 83.3%;
+    margin: 14.5vw auto;
+  }
+  .gift .mail_link {
+    width: 75%;
+    height: 0.8%;
+    left: 14.8%;
+    bottom: 1.875%;
+  }
+  .heed .text {
+    width: 83.3%;
+  }
+  .winner .title-sub {
+    width: 46.8%;
+  }
+  .form .text {
+    width: 63.3%;
+  }
+  .form .form-group {
+    width: 71.5%;
+  }
+  .form .form-group .form-label img {
+    height: 5vw;
+  }
+  .form .form-group input.form-control {
+    font-size: 4vw;
+  }
+  .form .form-group label.form-check-label img {
+    width: 65.6vw;
+  }
+  .form .form-group .form-select {
+    width: 100%;
+    font-size: 4vw;
+    background-position: right 1.33vw center;
+  }
+  .form .form-group .select-group > div {
+    width: 47.5%;
+  }
+  .form a.hover img {
+    width: 45%;
+  }
+  .question .title {
+    margin-top: 11.3vw;
+  }
+  .question .text {
+    margin-top: 4vw;
+  }
+  .question .check {
+    padding-left: 6.22vw;
+  }
+  .question .btn_next, .question .btn_fin > img {
+    width: 45vw;
+    margin-bottom: 9vw;
+    margin-top: 6vw;
+  }
+  .question .btn-group .form-check-label {
+    background-size: 5vw;
+  }
+  .question .q1 .text {
+    width: 68.7vw;
+  }
+  .question .q1 .check {
+    width: 61.15vw;
+  }
+  .question .q1 .btn-group {
+    width: 67vw;
+    top: 91.5vw;
+    margin-left: 1vw;
+  }
+  .question .q1 .btn-group .form-check-label[for=check1] {
+    height: 5.5vw;
+    margin-bottom: 5.5vw;
+  }
+  .question .q1 .btn-group .form-check-label[for=check2] {
+    height: 5.5vw;
+    margin-bottom: 6vw;
+  }
+  .question .q1 .btn-group .form-check-label[for=check3] {
+    height: 11vw;
+    margin-bottom: 5.5vw;
+  }
+  .question .q1 .btn-group .form-check-label[for=check4] {
+    height: 11.5vw;
+  }
+  .question .q1 .btn_next {
+    margin-top: 60vw;
+  }
+  .question .q2 .text {
+    width: 73.77vw;
+  }
+  .question .q2 .check {
+    width: 50.66vw;
+  }
+  .question .q2 .btn-group {
+    width: 57vw;
+    top: 113.5vw;
+  }
+  .question .q2 .btn-group .form-check-label {
+    background-position-y: 0.33vw;
+  }
+  .question .q2 .btn-group .form-check-label[for=check5] {
+    height: 5vw;
+    margin-bottom: 6.5vw;
+  }
+  .question .q2 .btn-group .form-check-label[for=check6] {
+    height: 5vw;
+    margin-bottom: 6vw;
+  }
+  .question .q2 .btn-group .form-check-label[for=check7] {
+    height: 5vw;
+    margin-bottom: 6.5vw;
+  }
+  .question .q2 .btn-group .form-check-label[for=check8] {
+    height: 5vw;
+  }
+  .question .q2 .btn_next {
+    margin-top: 50vw;
+  }
+  .question .q3 .text {
+    width: 73.4vw;
+  }
+  .question .q3 .check {
+    width: 8.89vw;
+  }
+  .question .q3 .btn-group {
+    width: 16vw;
+    top: 100vw;
+  }
+  .question .q3 .btn-group .form-check-label {
+    background-position-y: 0.3vw;
+  }
+  .question .q3 .btn-group .form-check-label[for=check9] {
+    height: 5vw;
+    margin-bottom: 6vw;
+  }
+  .question .q3 .btn-group .form-check-label[for=check10] {
+    height: 5vw;
+  }
+  .question .q3 .btn_next {
+    margin-top: 30vw;
+  }
+  .question .q4 .text {
+    width: 70.22vw;
+  }
+  .question .q4 .check {
+    width: 56vw;
+  }
+  .question .q4 .btn-group {
+    width: 65vw;
+    top: 78.5vw;
+  }
+  .question .q4 .btn-group .form-check-label {
+    background-position-y: 0.3vw;
+  }
+  .question .q4 .btn-group .form-check-label[for=check11] {
+    height: 10vw;
+    margin-bottom: 4.8vw;
+  }
+  .question .q4 .btn-group .form-check-label[for=check12] {
+    height: 9.5vw;
+    margin-bottom: 5vw;
+  }
+  .question .q4 .btn-group .form-check-label[for=check13] {
+    height: 6vw;
+    margin-bottom: 4vw;
+  }
+  .question .q4 .btn-group .form-check-label[for=check14] {
+    height: 5.5vw;
+  }
+  .question .q4 .btn_next {
+    margin-top: 50vw;
+  }
+  .question .q5 .text {
+    width: 49.78vw;
+  }
+  .question .q5 .check {
+    width: 61.34vw;
+  }
+  .question .q5 .btn-group {
+    width: 68.45vw;
+    top: 85vw;
+  }
+  .question .q5 .btn-group .form-check-label {
+    background-position-y: 0.3vw;
+  }
+  .question .q5 .btn-group .form-check-label[for=check15] {
+    height: 12vw;
+    margin-bottom: 5vw;
+  }
+  .question .q5 .btn-group .form-check-label[for=check16] {
+    height: 6vw;
+    margin-bottom: 5vw;
+  }
+  .question .q5 .btn-group .form-check-label[for=check17] {
+    height: 6vw;
+    margin-bottom: 5vw;
+  }
+  .question .q5 .btn-group .form-check-label[for=check18] {
+    height: 6vw;
+  }
+  .question .q5 .btn_fin > img {
+    margin-top: 60vw;
+  }
+  .health .title {
+    margin-top: min(96px, 12.8vw);
+  }
+  .health .step0 .pic {
+    width: 53.2%;
+    margin-top: min(9.3vw, 70px);
+  }
+  .health .step0 .text {
+    width: 52.8%;
+    margin: min(60px, 8vw);
+  }
+  .health .step0 .btn_go {
+    margin-bottom: min(125px, 16.7vw);
+    width: 52%;
+  }
+  .health .step-bar {
+    width: 77.6%;
+    margin: min(30px, 4vw);
+  }
+  .health .step-text {
+    margin-top: min(75px, 10vw);
+    margin-bottom: min(75px, 10vw);
+  }
+  .health .btn_next, .health .btn_more > img {
+    width: 45%;
+    margin-bottom: min(67px, 9vw);
+  }
+  .health .step1 .step-title {
+    width: 78%;
+  }
+  .health .step1 .step-text {
+    width: 76.5%;
+  }
+  .health .step2 .step-title {
+    width: 49%;
+  }
+  .health .step2 .step-text {
+    width: 68%;
+  }
+  .health .step3 .step-title {
+    width: 71.5%;
+  }
+  .health .step3 .step-text {
+    width: 68%;
+  }
+  .health .step4 .step-title {
+    width: 60%;
+  }
+  .health .step4 .step-text {
+    width: 71.2%;
+  }
+  .health .step5 .step-title {
+    width: 30.7%;
+  }
+  .health .step5 .step-text {
+    width: 70.5%;
+  }
+}/*# sourceMappingURL=style.css.map */
